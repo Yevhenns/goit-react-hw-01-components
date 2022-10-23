@@ -1,5 +1,5 @@
-
-export const Profile = () => {
+// import user from '../../data/user.json'
+export const Profile = ({username}) => {
   return <div class="profile">
   <div class="description">
     <img
@@ -7,7 +7,7 @@ export const Profile = () => {
       alt="User avatar"
       class="avatar"
     />
-    <p class="name">Petra Marica</p>
+    <p class="name">${username}</p>
     <p class="tag">@pmarica</p>
     <p class="location">Salvador, Brasil</p>
   </div>
