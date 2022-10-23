@@ -1,0 +1,65 @@
+.profile {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.stats {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  background-color: aliceblue;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 2px solid grey;
+}
+
+.stats li:not(:last-child) {
+  border-right: 2px solid grey;
+}
+
+.stats li {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.description {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Roboto';
+}
+
+.tag,
+.location,
+.label {
+  color: grey;
+}
+
+.tag {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.quantity {
+  font-weight: 700;
+}
