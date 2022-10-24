@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { TransactionHistoryItem } from "./TransactionHistoryItem/TransactionHistoryItem"
 import styles from './TransactionHistory.module.css'
 
@@ -21,4 +22,8 @@ export const TransactionHistory = ({ items }) => {
     })}
   </tbody>
 </table>
+}
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object)
 }
