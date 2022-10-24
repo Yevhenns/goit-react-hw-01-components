@@ -8,7 +8,7 @@ export const Profile = ({ username, tag, location, avatar = "https://cdn-icons-p
       src={avatar}
       alt="User avatar"
       className={styles.avatar}
-        width="150"
+      width="150"
     />
       <p className={styles.name}>{username}</p>
     <p className={styles.tag}>@{tag}</p>
