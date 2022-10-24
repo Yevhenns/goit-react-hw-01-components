@@ -10,4 +10,19 @@
   box-sizing: border-box;
   margin-bottom: 20px;
   box-shadow: 10px 10px 10px 10px rgba(75, 228, 10, 0.12);
+  border-collapse: collapse;
+}
+.transactionHistory th {
+  padding: 10px;
+  border: 1px solid #fff;
+  background-color: rgb(35, 132, 123);
+  color: rgb(243, 240, 240);
+}
+.transactionHistory td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #2a2a2a;
+}
+.transactionHistory tr:nth-child(even) {
+  background: rgb(200, 193, 193);
 }
