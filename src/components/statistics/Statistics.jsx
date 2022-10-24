@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './Statistics.module.css'
 
 export const Statistics = ({ title, stats }) => {
@@ -6,7 +7,7 @@ export const Statistics = ({ title, stats }) => {
     <ul className={styles.statList}>
       {stats.map(element => {
         return <li className={styles.item} style={{ backgroundColor: `${getRandomHexColor()}` }} key={element.id}>
-      <span className="label">{element.label}</span>
+      <span className={styles.label}>{element.label}</span>
       <span className={styles.percentage}>{element.percentage}%</span>
     </li>
       })}
@@ -16,4 +17,8 @@ export const Statistics = ({ title, stats }) => {
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`
+}
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(PropTypes.object)
 }
