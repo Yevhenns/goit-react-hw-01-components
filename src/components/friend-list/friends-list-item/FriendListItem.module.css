@@ -4,14 +4,6 @@
   box-shadow: 5px 5px 5px rgba(104, 10, 228, 0.6);
 }
 
-.status {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
 .avatar {
   margin-right: 10px;
 }
@@ -21,4 +13,22 @@
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.status__isOnline {
+  background-color: green;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.status__isOffline {
+  background-color: red;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
