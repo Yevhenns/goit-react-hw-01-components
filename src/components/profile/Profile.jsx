@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types'
 import styles from './Profile.module.css'
 
-export const Profile = ({ username, tag, location, avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png", stats }) => {
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar = "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
+  stats:{ followers, views, likes } }) => {
   return <div className={styles.profile}>
   <div className={styles.description}>
     <img
@@ -18,15 +23,15 @@ export const Profile = ({ username, tag, location, avatar = "https://cdn-icons-p
   <ul className={styles.stats}>
     <li>
       <span className={styles.label}>Followers</span>
-      <span className={styles.quantity}>{stats.followers}</span>
+      <span className={styles.quantity}>{followers}</span>
     </li>
     <li>
       <span className={styles.label}>Views</span>
-      <span className={styles.quantity}>{stats.views}</span>
+      <span className={styles.quantity}>{views}</span>
     </li>
     <li>
       <span className={styles.label}>Likes</span>
-      <span className={styles.quantity}>{stats.likes}</span>
+      <span className={styles.quantity}>{likes}</span>
     </li>
   </ul>
 </div>
@@ -37,5 +42,9 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired, 
-  stats: PropTypes.objectOf(PropTypes.number.isRequired),
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired
+  }).isRequired,
 }
